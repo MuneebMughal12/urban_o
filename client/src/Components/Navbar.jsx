@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useNavigate, useLocation } from "react-router-dom";
 import Logo from "../assets/logo_12345-removebg-preview.png"
 const Navbar = () => {
@@ -20,9 +21,15 @@ const Navbar = () => {
   return (
     <nav className="bg-[#172D2D] px-6 py-4 flex items-center justify-between md:justify-around w-full" style={{ fontFamily: '"Montserrat' }}>
       {/* Logo */}
-      <div className="text-white font-semibold ">
-       <img src={Logo} alt="Urban Oasis Logo" className=" h-24 w-24 object-contain" />
-      </div>
+      <div className="text-white font-semibold">
+      <Link to="/"> 
+        <img
+          src={Logo}
+          alt="Urban Oasis Logo"
+          className="h-24 w-24 object-contain"
+        />
+      </Link>
+    </div>
 
       {/* Mobile Menu Button */}
       <button

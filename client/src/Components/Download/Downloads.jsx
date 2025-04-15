@@ -141,7 +141,7 @@ import HomeImg from "../../assets/home-img.png";
 
 export default function App() {
   return (
-    <div className="h-screen w-full bg-black flex justify-center text-white">
+    <div className="h-screen w-full bg-[#142B2B] flex justify-center text-white">
 
       <section className="home grid h-screen pt-32 pb-16">
         <div className="home__container container grid content-center gap-12 lg:max-w-5xl lg:grid-cols-2 lg:items-center">
@@ -169,12 +169,6 @@ export default function App() {
             <div className="home__shadow mx-auto h-8 w-36 animate-shadow rounded-[50%] bg-gray-900/30 blur-md lg:w-64"></div>
           </div>
         </div>
-
-        {/* <div className="home__footer flex items-center justify-center gap-2 self-end text-sm font-semibold">
-          <p>0891 2345 6789</p>
-          <p>|</p>
-          <p>info@xcompany.com</p>
-        </div> */}
       </section>
     </div>
   );
