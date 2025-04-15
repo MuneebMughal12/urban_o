@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import bgunit from "./unitbg.avif";
-import imagineBg from "./imagine.jpg";
+// import imagineBg from "./imagine.jpg";
 // pent
 import Pent from "./panthouse.jpeg"
 import Pent2 from "./pent/PENT2.png"
@@ -176,32 +176,32 @@ const MasterPlan = () => {
         </div>
       </div>
 
-    
+
 
       {/* Extrior Design */}
       <h1
-          className="text-7xl flex items-center justify-center font-bold text-[#142B2B] mb-6 drop-shadow-lg"
-          style={{ textShadow: "rgba(0, 0, 0, 0.4) 0px 4px 5px" }}
-        >
-          Extrior Design
-        </h1>
+        className="text-5xl md:text-7xl flex items-center justify-center font-bold text-[#142B2B] mb-6 drop-shadow-lg"
+        style={{ textShadow: "rgba(0, 0, 0, 0.4) 0px 4px 5px" }}
+      >
+        Extrior Design
+      </h1>
       <section className="bg-white py-10 px-4 flex justify-center items-center">
-    
-      <div className="max-w-[90%] w-full flex justify-center items-center">
-        <div className="relative w-full lg:w-[70%]">
-          <img
-            src={images[currentIndex]}
-            alt="Slider Image"
-            className="w-full h-auto object-cover rounded-lg transition-opacity duration-500"
-          />
+
+        <div className="max-w-[90%] w-full flex justify-center items-center">
+          <div className="relative w-full lg:w-[70%]">
+            <img
+              src={images[currentIndex]}
+              alt="Slider Image"
+              className="w-full h-auto object-cover rounded-lg transition-opacity duration-500"
+            />
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
       {/* FLOOR PLANS */}
       <div className="bg-[#142B2B] text-white text-center py-20">
         <h1
-          className="text-7xl font-bold text-[white] mb-6 drop-shadow-lg"
+          className="text-5xl md:text-7xl font-bold text-[white] mb-6 drop-shadow-lg"
           style={{ textShadow: "rgba(0, 0, 0, 0.4) 0px 4px 5px" }}
         >
           FLOOR PLANS
@@ -210,26 +210,27 @@ const MasterPlan = () => {
           <div className="relative w-80 mt-2 border-t my-12 border-gray-500"></div>
         </div>
 
-        {/* First Row: 3 Items */}
-        <div className="grid grid-cols-3 gap-10 justify-center items-center mb-10">
+        {/* First Row */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mb-10">
           {plan.slice(0, 3).map((plan, index) => (
             <FloorPlanItem key={index} plan={plan} setSelectedImage={setSelectedImage} />
           ))}
         </div>
 
-        {/* Second Row: 4 Items */}
-        <div className="grid grid-cols-4 gap-10 justify-center items-center mb-10">
+        {/* Second Row */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mb-10">
           {plan.slice(3, 7).map((plan, index) => (
             <FloorPlanItem key={index} plan={plan} setSelectedImage={setSelectedImage} />
           ))}
         </div>
 
-        {/* Third Row: 2 Items */}
-        <div className="grid grid-cols-2 gap-10 justify-center items-center">
+        {/* Third Row */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
           {plan.slice(7).map((plan, index) => (
             <FloorPlanItem key={index} plan={plan} setSelectedImage={setSelectedImage} />
           ))}
         </div>
+
 
         {/* Modal for Selected Image */}
         {selectedImage && (
@@ -251,11 +252,11 @@ const MasterPlan = () => {
         )}
       </div>
       {/* 1 KBH */}
-      <h1 className="text-7xl text-center font-bold text-[#142B2B] mb-6 drop-shadow-lg" style={{ textShadow: "rgba(0, 0, 0, 0.4) 0px 4px 5px" }} >
+      <h1 className="text-5xl md:text-7xl text-center font-bold text-[#142B2B] mb-6 drop-shadow-lg" style={{ textShadow: "rgba(0, 0, 0, 0.4) 0px 4px 5px" }} >
         UNITS - SIZES
       </h1>
       <div className="bg-[#142B2B] h-full text-white text-center py-28">
-        <h2 className="text-6xl font-bold text-white drop-shadow-lg" style={{ textShadow: "rgba(0, 0, 0, 0.4) 0px 4px 5px" }}>
+        <h2 className="text-5xl md:text-6xl font-bold text-white drop-shadow-lg" style={{ textShadow: "rgba(0, 0, 0, 0.4) 0px 4px 5px" }}>
           1KBH
         </h2>
         <div className='w-full flex justify-around'>
@@ -314,7 +315,7 @@ const MasterPlan = () => {
         )}
       </div>
       <div className="bg-white h-full text-[#142B2B] text-center py-28">
-        <h2 className="text-6xl font-bold text-[#142B2B] drop-shadow-lg" style={{ textShadow: "rgba(0, 0, 0, 0.4) 0px 4px 5px" }}>
+        <h2 className="text-5xl md:text-6xl font-bold text-[#142B2B] drop-shadow-lg" style={{ textShadow: "rgba(0, 0, 0, 0.4) 0px 4px 5px" }}>
           2KBH
         </h2>
         <div className="w-full flex justify-around">
@@ -376,7 +377,7 @@ const MasterPlan = () => {
       <div>
         {/* 3 KBH Section */}
         <div className="bg-[#142B2B] h-full text-white text-center py-28" style={{ textShadow: "rgba(0, 0, 0, 0.4) 0px 4px 5px" }}>
-          <h2 className="text-6xl font-bold">3KBH</h2>
+          <h2 className="text-5xl md:text-6xl font-bold">3KBH</h2>
           <div className='w-full flex justify-around'>
             <div className="relative w-80 mt-2 border-t my-12 border-gray-500"></div>
           </div>
@@ -401,7 +402,7 @@ const MasterPlan = () => {
 
         {/* Pent House Section */}
         <div className="bg-white h-full text-[#142B2B] text-center py-28" style={{ textShadow: "rgba(0, 0, 0, 0.4) 0px 4px 5px" }}>
-          <h2 className="text-6xl font-bold">Pent House</h2>
+          <h2 className="text-5xl md:text-6xl font-bold">Pent House</h2>
           <div className='w-full flex justify-around'>
             <div className="relative w-80 mt-2 border-t my-12 border-gray-500"></div>
           </div>

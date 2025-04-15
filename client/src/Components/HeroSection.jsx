@@ -1,14 +1,56 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "tailwindcss/tailwind.css";
 import { motion } from "framer-motion";
 import { FaWhatsapp } from "react-icons/fa";
 import heroImage from "../assets/Aboutbg.png";
 
+const ResponsiveHeading = () => {
+  const [letterSpacing, setLetterSpacing] = useState("2rem");
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 768px)");
+
+    const handleResize = () => {
+      if (mediaQuery.matches) {
+        setLetterSpacing("2rem");
+      } else {
+        setLetterSpacing("0.5rem");
+      }
+    };
+
+    handleResize(); // Initial check
+    mediaQuery.addEventListener("change", handleResize);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleResize);
+    };
+  }, []);
+
+  return (
+    <motion.h1
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      className="font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
+      style={{
+        fontFamily: "Poppins, sans-serif",
+        fontWeight: "bold",
+        lineHeight: "1.5em",
+        letterSpacing: letterSpacing,
+        textShadow:
+          "#c8c8c8 1px 1px 0px, #b4b4b4 0px 2px 0px, #a0a0a0 0px 3px 0px, rgba(140, 140, 140, 0.5) 0px 4px 0px, #787878 0px 0px 0px, rgba(0, 0, 0, 0.5) 0px 5px 10px",
+      }}
+    >
+      WELCOME
+    </motion.h1>
+  );
+};
+
 const HeroSection = () => {
   return (
     <div className="relative w-full h-screen overflow-hidden">
-    {/* Background Image */}
-    <img
+      {/* Background Image */}
+      <img
         src={heroImage}
         alt="Background"
         className="absolute top-0 left-0 w-full h-full object-cover"
@@ -16,22 +58,9 @@ const HeroSection = () => {
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-30 flex flex-col items-center justify-center text-white text-center px-4 sm:px-8">
-        <motion.h1
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
-          style={{
-            fontFamily: "Poppins, sans-serif",
-            fontWeight: "bold",
-            lineHeight: "1.5em",
-            letterSpacing: "2rem",
-            textShadow:
-              "#c8c8c8 1px 1px 0px, #b4b4b4 0px 2px 0px, #a0a0a0 0px 3px 0px, rgba(140, 140, 140, 0.5) 0px 4px 0px, #787878 0px 0px 0px, rgba(0, 0, 0, 0.5) 0px 5px 10px",
-          }}
-        >
-          WELCOME
-        </motion.h1>
+        
+        {/* Responsive Heading with dynamic letterSpacing */}
+        <ResponsiveHeading />
 
         <motion.p
           initial={{ opacity: 0, y: 50 }}
