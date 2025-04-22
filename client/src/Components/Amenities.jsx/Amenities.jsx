@@ -1,6 +1,6 @@
 import React from "react";
 import "tailwindcss/tailwind.css";
-import Aminiti from "./Aminiti.mp4";
+import Aminities from "./Amenities.jpg";
 import { motion } from "framer-motion";
 import Gym from "./gym.jpg"
 import Spa from "./spa.jpg"
@@ -18,27 +18,20 @@ const Amenities = () => {
     <div style={{ fontFamily: 'Montserrat'  ,   
       textShadow: "rgba(0, 0, 0, 0.4) 0px 4px 5px",
     }}>
-      <div className="relative w-full h-[64vh]  overflow-hidden">
-        {/* Background Video */}
-        <video autoPlay
-          loop
-          muted
-          className="absolute top-0 left-0 w-full h-[64vh]  object-cover">
-          <source src={Aminiti} type="video/mp4" />
-        </video>
-
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white text-center">
-          <motion.h1
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            className="text-6xl font-bold"
-          >
-            Amenities
-          </motion.h1>
-        </div>
-      </div>
+       {/* Background image */}
+           <div className="relative w-full h-[64vh] overflow-hidden">
+             <img src={Aminities} alt="Units Background" className="absolute top-0 left-0 w-full h-full" />
+             <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white text-center">
+               <motion.h1
+                 initial={{ opacity: 0, y: -50 }}
+                 animate={{ opacity: 1, y: 0 }}
+                 transition={{ duration: 1 }}
+                 className="text-6xl font-bold"
+               >
+                 Aminities
+               </motion.h1>
+             </div>
+           </div>
       {/* Hero Section */}
       <div
         className="relative w-full h-[323px] bg-cover bg-center"

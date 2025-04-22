@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "tailwindcss/tailwind.css";
 import { motion } from "framer-motion";
-import US from "./about.mp4";
-// import developer1 from "./D5Image.avif";
-// import logo from "./D5Image.avif";
-
+import ABOUT from "./Aboutusbg.jpg";
 import Aminities from "./Aminities.png";
 import skydle from "./skydle.png";
 import Ceo from "./ceo.jpeg";
@@ -16,17 +13,10 @@ import Logo from "./logo_12345-removebg-preview.png"
 const About = () => {
 
   return (
-    <div style={{ fontFamily: '"Montserrat' }}>
-      {/* Background Video Section */}
-      <div className="relative w-full md:h-[64vh] h-[40vh] overflow-hidden">
-        <video
-          autoPlay
-          loop
-          muted
-          className="absolute top-0 left-0 w-full max-h-full h-[64vh] md:h-full object-cover scale-100"
-        >
-          <source src={US} type="video/mp4" />
-        </video>
+    <div style={{ fontFamily: '"Montserrat', textShadow: "rgba(0, 0, 0, 0.4) 0px 4px 5px" }}>
+      {/* Background image Section */}
+      <div className="relative w-full h-[64vh] overflow-hidden ">
+        <img src={ABOUT} alt="Units Background" className="absolute top-0 left-0 w-full h-full" />
         <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white text-center">
           <motion.h1
             initial={{ opacity: 0, y: -50 }}
@@ -38,6 +28,7 @@ const About = () => {
           </motion.h1>
         </div>
       </div>
+
       {/* About Us Content deatail */}
       <div className="min-h-screen bg-[#142B2B] justify-around text-white px-10 py-16 flex flex-col lg:flex-row items-start " >
         {/* Left Side - About Us Section */}

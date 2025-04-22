@@ -80,12 +80,32 @@ const Forms = () => {
                         <h2 className="text-2xl font-bold text-center mb-6">ENQUIRY</h2>
                         <form onSubmit={(e) => handleSubmit(e, "enquiry")} className="space-y-4">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <input type="text" name="firstName" placeholder="Name" onChange={handleChange} className="p-3 w-full bg-white text-black rounded-md" required />
-                                <input type="text" name="LastName" placeholder="Last" onChange={handleChange} className="p-3 w-full bg-white text-black rounded-md" required />
+                                <input type="text" 
+                                name="firstName"
+                                 placeholder="Name" onChange={handleChange}
+                                  className="p-3 w-full bg-white text-black rounded-md" required />
+                                <input type="text" 
+                                name="LastName" 
+                                placeholder="Last"
+                                 onChange={handleChange} 
+                                 className="p-3 w-full bg-white text-black rounded-md" required />
                             </div>
-                            <input type="email" name="email" placeholder="Email *" onChange={handleChange} className="p-3 w-full bg-white text-black rounded-md" required />
-                            <input type="text" name="phone" placeholder="phone *" onChange={handleChange} className="p-3 w-full bg-white text-black rounded-md" required />
-                            <textarea name="message" placeholder="Message" rows="3" onChange={handleChange} className="p-3 w-full bg-white text-black rounded-md"></textarea>
+                            <input type="email" 
+                            name="email" 
+                            placeholder="Email *" 
+                            onChange={handleChange} 
+                            className="p-3 w-full bg-white text-black rounded-md" required />
+                            <input type="text" 
+                            name="phone"
+                             placeholder="phone *"
+                              onChange={handleChange} 
+                              className="p-3 w-full bg-white text-black rounded-md" required />
+                            <textarea name="message"
+                             placeholder="Message"
+                              rows="3" onChange={handleChange} 
+                              className="p-3 w-full bg-white text-black rounded-md">
+                                
+                              </textarea>
                             <button className="w-full bg-red-600 hover:bg-white hover:text-red-600 text-white py-3 rounded-md font-semibold">SEND ENQUIRY</button>
                         </form>
                     </div>
