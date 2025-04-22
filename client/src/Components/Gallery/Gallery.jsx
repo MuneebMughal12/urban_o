@@ -50,13 +50,13 @@ export default function FullPageGallery() {
                     className="absolute top-1/2 left-6 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg"
                     onClick={prevSlide}
                 >
-                    <FaArrowLeft size={24} className="text-gray-800" />
+                    <FaArrowLeft md:size={24} size={10} className="text-gray-800" />
                 </button>
                 <button
                     className="absolute top-1/2 right-6 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg"
                     onClick={nextSlide}
                 >
-                    <FaArrowRight size={24} className="text-gray-800" />
+                    <FaArrowRight md:size={24} size={10} className="text-gray-800" />
                 </button>
 
                 {/* Thumbnails */}
