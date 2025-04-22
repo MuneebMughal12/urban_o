@@ -64,10 +64,7 @@ const Amenities = () => {
 
           {/* Right Side - Gym Content */}
           <motion.div
-            initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1.5 }}
-            viewport={{ once: true, amount: 0.2 }}
+ 
             className="flex flex-col text-gold p-10 items-center justify-center"
           >
             <h2 className="text-center md:text-7xl text-5xl font-bold text-gold mb-10">
@@ -80,10 +77,7 @@ const Amenities = () => {
         <div className="grid grid-cols-2 items-center justify-center text-white mt-10">
           {/* Left Side - Spa Content */}
           <motion.div
-            initial={{ opacity: 0, x: -100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1.5 }}
-            viewport={{ once: true, amount: 0.2 }}
+ 
             className="flex flex-col text-white p-10 items-center justify-center"
           >
             <p className="text-lg text-center">
@@ -116,10 +110,6 @@ const Amenities = () => {
 
           {/* Right Side - Cafe Title */}
           <motion.div
-            initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1.5 }}
-            viewport={{ once: true, amount: 0.2 }}
             className="flex items-center justify-center text-right pr-10"
           >
             <h2 className="md:md:text-4xl text-2xl  font-bold text-[white]">ROOF TOP CAFE</h2>
@@ -130,10 +120,7 @@ const Amenities = () => {
         <div className="grid grid-cols-2 items-center mt-10">
           {/* Left Side - Mini Theater Title */}
           <motion.div
-            initial={{ opacity: 0, x: -100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1.5 }}
-            viewport={{ once: true, amount: 0.2 }}
+
             className="flex items-center justify-center pl-10"
           >
             <h2 className="md:text-4xl text-2xl font-bold text-[white] ">MINI THEATER</h2>
@@ -162,10 +149,7 @@ const Amenities = () => {
 
           {/* Right Side - INSIDE KID PLAYING AREA Title */}
           <motion.div
-            initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1.5 }}
-            viewport={{ once: true, amount: 0.2 }}
+
             className="flex items-center justify-center text-right pr-10"
           >
             <h2 className="md:text-4xl text-2xl font-bold text-[white]">INSIDE KID PLAYING AREA</h2>
@@ -176,10 +160,7 @@ const Amenities = () => {
         <div className="grid grid-cols-2 items-center mt-10">
           {/* Left Side - Mini Theater Title */}
           <motion.div
-            initial={{ opacity: 0, x: -100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1.5 }}
-            viewport={{ once: true, amount: 0.2 }}
+
             className="flex items-center justify-center pl-10"
           >
             <h2 className="md:text-4xl text-2xl font-bold text-[white] ">GARBAGE SHOOT SYSTEM</h2>
@@ -207,9 +188,7 @@ const Amenities = () => {
           {/* Image and Content Section */}
           <div className="relative mt-10">
             <motion.img
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.5 }}
+
               src={RomanticGetaway}
               alt="Romantic Getaway"
               className="w-full h-[70vh]  object-cover rounded-lg shadow-lg"
