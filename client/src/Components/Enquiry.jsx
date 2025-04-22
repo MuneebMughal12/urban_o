@@ -20,12 +20,20 @@ const Forms = () => {
       
         try {
           const response = await axios.post("http://localhost:5000/send-email", {
-            formData,  // Wrap formData inside an object
-            type, 
+            formData,
+            type,
           });
       
           if (response.status === 200) {
             alert("Email Sent Successfully!");
+            // Reset form after successful submission
+            setFormData({
+              firstName: "",
+              lastName: "",
+              phone: "",
+              email: "",
+              message: "",
+            });
           }
         } catch (error) {
           console.error("Error sending email:", error);
@@ -82,25 +90,34 @@ const Forms = () => {
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <input type="text" 
                                 name="firstName"
+                                value={formData.firstName}
                                  placeholder="Name" onChange={handleChange}
                                   className="p-3 w-full bg-white text-black rounded-md" required />
+
                                 <input type="text" 
-                                name="LastName" 
-                                placeholder="Last"
+                                name="lastName" 
+                                value={formData.lastName}
+                                placeholder="Last Name"
                                  onChange={handleChange} 
                                  className="p-3 w-full bg-white text-black rounded-md" required />
+
                             </div>
                             <input type="email" 
                             name="email" 
+                            value={formData.email}
                             placeholder="Email *" 
                             onChange={handleChange} 
                             className="p-3 w-full bg-white text-black rounded-md" required />
+
                             <input type="text" 
                             name="phone"
-                             placeholder="phone *"
+                            value={formData.phone}
+                             placeholder="Phone *"
                               onChange={handleChange} 
                               className="p-3 w-full bg-white text-black rounded-md" required />
+
                             <textarea name="message"
+                              value={formData.message}
                              placeholder="Message"
                               rows="3" onChange={handleChange} 
                               className="p-3 w-full bg-white text-black rounded-md">

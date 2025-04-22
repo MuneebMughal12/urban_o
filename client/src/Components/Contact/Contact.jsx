@@ -17,10 +17,24 @@ const Forms = () => {
 
   const handleSubmit = async (e, type) => {
     e.preventDefault();
-
+  
     try {
-      await axios.post("http://localhost:5000/send-email", { formData, type });
-      alert("Email Sent Successfully!");
+      const response = await axios.post("http://localhost:5000/send-email", {
+        formData,
+        type,
+      });
+  
+      if (response.status === 200) {
+        alert("Email Sent Successfully!");
+        // Reset form after successful submission
+        setFormData({
+          firstName: "",
+          lastName: "",
+          phone: "",
+          email: "",
+          message: "",
+        });
+      }
     } catch (error) {
       console.error("Error sending email:", error);
       alert("Failed to send email.");
@@ -78,6 +92,7 @@ return (
             <input
               type="text"
               name="firstName"
+              value={formData.firstName}
               placeholder="First Name"
               onChange={handleChange}
               className="border p-2 rounded w-full"
@@ -86,6 +101,7 @@ return (
             <input
               type="text"
               name="lastName"
+              value={formData.lastName}
               placeholder="Last Name"
               onChange={handleChange}
               className="border p-2 rounded w-full"
@@ -95,6 +111,7 @@ return (
           <input
             type="email"
             name="email"
+            value={formData.email}
             placeholder="Email"
             onChange={handleChange}
             className="border p-2 rounded w-full mt-4"
@@ -103,6 +120,7 @@ return (
           <input
             type="text"
             name="phone"
+            value={formData.phone}
             placeholder="Phone"
             onChange={handleChange}
             className="border p-2 rounded w-full mt-4"
@@ -110,6 +128,7 @@ return (
           />
           <textarea
             name="message"
+            value={formData.message}
             placeholder="Write a message"
             onChange={handleChange}
             className="border p-2 rounded w-full mt-4"
