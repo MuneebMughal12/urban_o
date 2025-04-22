@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import bgGallery from "./bgGallery.avif";
+import bgGallery from "./bgGallery.avif"
+import { motion } from "framer-motion";
 import ImageGallery1 from "./slider1.jpg";
 import ImageGallery2 from "./slider2.jpg";
 import ImageGallery3 from "./slider3.jpg";
@@ -21,27 +21,12 @@ export default function FullPageGallery() {
         setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
     };
 
-    const getSlideStyle = (index) => {
-        const offset = index - currentIndex;
-        const absOffset = Math.abs(offset);
-
-        return {
-            transform: `translateX(${offset * 100}%) scale(${1 - absOffset * 0.1})`,
-            zIndex: images.length - absOffset,
-            opacity: offset === 0 ? 1 : 0.5,
-        };
-    };
-
     return (
         <div>
-            {/* Background Gallery Section */}
+            {/* Background Section */}
             <div className="relative w-full h-[64vh] overflow-hidden">
-                <img
-                    src={bgGallery}
-                    alt="Gallery Background"
-                    className="absolute top-0 left-0 w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white text-center" style={{ fontFamily: "Montserrat", textShadow: "rgba(0, 0, 0, 0.4) 0px 4px 5px" }}>
+                <img src={bgGallery} alt="Units Background" className="absolute top-0 left-0 w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white text-center" style={{  fontFamily: '"Montserrat', textShadow: "rgba(0, 0, 0, 0.4) 0px 4px 5px" }}> 
                     <motion.h1
                         initial={{ opacity: 0, y: -50 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -52,40 +37,40 @@ export default function FullPageGallery() {
                     </motion.h1>
                 </div>
             </div>
+            <div className="relative  w-full h-screen overflow-hidden">
+                {/* Main Image */}
+                <img
+                    src={images[currentIndex]}
+                    alt="Gallery"
+                    className="w-full h-full  transition-all duration-700 ease-in-out"
+                />
 
-            {/* Image Slider Section */}
-            <div className="relative w-full h-[120vh] flex items-center justify-center overflow-hidden bg-gray-100 rounded-xl shadow-2xl">
-                <div className="relative w-full h-full flex items-center justify-center">
+                {/* Navigation Arrows */}
+                <button
+                    className="absolute top-1/2 left-6 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg"
+                    onClick={prevSlide}
+                >
+                    <FaArrowLeft size={24} className="text-gray-800" />
+                </button>
+                <button
+                    className="absolute top-1/2 right-6 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg"
+                    onClick={nextSlide}
+                >
+                    <FaArrowRight size={24} className="text-gray-800" />
+                </button>
+
+                {/* Thumbnails */}
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 bg-black bg-opacity-50 p-2 rounded-lg">
                     {images.map((img, index) => (
-                        <div
+                        <img
                             key={index}
-                            className="absolute transition-all duration-700 ease-in-out rounded-xl overflow-hidden shadow-lg"
-                            style={{
-                                ...getSlideStyle(index),
-                                width: "60%",
-                                height: "80%",
-                                transitionTimingFunction: "cubic-bezier(0.77, 0, 0.175, 1)",
-                            }}
-                        >
-                            <img src={img} alt={`Slide ${index}`} className="w-full h-full object-cover rounded-xl" />
-                        </div>
+                            src={img}
+                            alt="Thumbnail"
+                            className={`w-16 h-12 object-cover cursor-pointer rounded-md transition-all duration-300 border-2 ${index === currentIndex ? "border-white" : "border-transparent"
+                                }`}
+                            onClick={() => setCurrentIndex(index)}
+                        />
                     ))}
-
-                    {/* Navigation Buttons */}
-                    {/* Navigation Buttons on Right Side */}
-                    <button
-                        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-md hover:bg-gray-200 z-10"
-                        onClick={prevSlide}
-                    >
-                        <FaArrowLeft />
-                    </button>
-                    <button
-                        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-md hover:bg-gray-200 z-10"
-                        onClick={nextSlide}
-                    >
-                        <FaArrowRight />
-                    </button>
-
                 </div>
             </div>
         </div>
