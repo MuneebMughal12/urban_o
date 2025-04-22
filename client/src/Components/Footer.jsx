@@ -4,7 +4,7 @@ import logo from "../assets/logo_12345-removebg-preview.png"
 
 const Footer = () => {
   return (
-    <footer className="bg-white text-black py-10 px-4 border-t-2 border-black relative" style={{ fontFamily: "Montserrat" }}>
+    <footer className="bg-white text-black py-10 px-4 border-t-2 border-black relative" style={{ fontFamily: "Montserrat" , textShadow: "rgba(0, 0, 0, 0.4) 0px 4px 5px" }}>
       {/* Main Footer Content */}
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center md:items-start">
         

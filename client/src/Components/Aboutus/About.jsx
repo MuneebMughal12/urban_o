@@ -18,12 +18,12 @@ const About = () => {
   return (
     <div style={{ fontFamily: '"Montserrat' }}>
       {/* Background Video Section */}
-      <div className="relative w-full h-[64vh] overflow-hidden">
+      <div className="relative w-full md:h-[64vh] h-[40vh] overflow-hidden">
         <video
           autoPlay
           loop
           muted
-          className="absolute top-0 left-0 w-full max-h-full object-cover scale-100"
+          className="absolute top-0 left-0 w-full max-h-full h-[64vh] md:h-full object-cover scale-100"
         >
           <source src={US} type="video/mp4" />
         </video>
