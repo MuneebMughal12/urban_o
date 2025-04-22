@@ -202,7 +202,6 @@ const Amenities = () => {
           <div className="flex flex-col items-start">
             <h2 className="md:text-4xl text-3xl font-bold text-[white]">PERFECT</h2>
             <h2 className="md:text-4xl text-3xl font-bold text-[white]">ROMANTIC GETAWAY</h2>
-            <div className="w-48 border-t-2 border-[white] mt-2"></div>
           </div>
 
           {/* Image and Content Section */}

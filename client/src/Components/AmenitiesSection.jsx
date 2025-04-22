@@ -38,7 +38,6 @@ const WhyUsSection = () => {
                 }}>
                     WHY US?
                 </h2>
-                {/* <div className="absolute top-0 left-0 w-full h-full border-r-4 border-white transform translate-x-6 translate-y-6"></div> */}
             </div>
 
             {/* Right Side: Reasons Grid */}
