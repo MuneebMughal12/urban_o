@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import ABOUT from "./Aboutusbg.jpg";
 import Aminities from "./Aminities.png";
 import skydle from "./skydle.png";
-import Ceo from "./ceo.jpeg";
+import Ceo from "./imagechnage.jpeg";
 import Logo from "./logo_12345-removebg-preview.png"
 
 
@@ -189,34 +189,3 @@ const About = () => {
 };
 
 export default About;
-//  {/* Description */}
-//  <motion.div
-//  className="bg-[#142B2B] flex flex-col items-center text-white text-lg p-8 mt-12"
-//  initial={{ opacity: 0, y: 50 }}
-//  animate={{ opacity: 1, y: 0 }}
-//  transition={{ duration: 1 }}
-// >
-//  <p className="text-center max-w-5xl"
-//  >
-//    Jasmil Properties Limited is a Ghanaian -owned real
-//    estate and property management company with strategic
-//    international partners. As one of the rapidly growing{" "}
-
-//    <strong>real estate companies headquartered in Accra, Ghana,</strong>
-//    we specialize in the development of both economical
-//    and premium residential and commercial properties
-//  </p>
-
-//  <p className="mt-4 text-center max-w-5xl">
-//    Our focus is on emerging and prime areas in Accra and
-//    its environs
-//  </p>
-//  <p className="mt-4 text-center font-bold max-w-5xl">
-//    Head Office:
-//  </p>
-
-//  <p className="mt-4 text-center max-w-5xl">
-//    North Industrial Area, Accra{" "}
-
-//  </p>
-// </motion.div>
