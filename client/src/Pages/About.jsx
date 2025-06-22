@@ -1,13 +1,26 @@
-import React from 'react'
+import React, { lazy, Suspense } from 'react';
+import loadingImage from '../assets/robot.gif'; 
 
-import About from '../Components/Aboutus/About'
+const About = lazy(() => import('../Components/Aboutus/About'));
+
 const Home = () => {
   return (
-    <div>
-     <About/>
-    
-    </div>
-  )
-}
+    <Suspense
+      fallback={
+        <div className="flex flex-col items-center justify-center h-screen bg-[#142B2B]">
+          <img
+            src={loadingImage}
+            alt="Loading..."
+            className="w-96 h-96 mb-4"
+          />
+        </div>
+      }
+    >
+      <div>
+        <About />
+      </div>
+    </Suspense>
+  );
+};
 
-export default Home
+export default Home;

@@ -26,6 +26,7 @@ const Amenities = () => {
                  initial={{ opacity: 0, y: -50 }}
                  animate={{ opacity: 1, y: 0 }}
                  transition={{ duration: 1 }}
+                 
                  className="text-6xl font-bold"
                >
                  Aminities
@@ -143,6 +144,7 @@ const Amenities = () => {
             <motion.img
               src={KID}
               alt="Roof Top Cafe"
+              loading="lazy"
               className="w-full h-[572px] object-cover"
             />
           </div>
@@ -171,6 +173,7 @@ const Amenities = () => {
             <motion.img
               src={GARBAGE}
               alt="Mini Theater"
+              loading="lazy"
               className="w-full h-[572px] "
             />
           </div>

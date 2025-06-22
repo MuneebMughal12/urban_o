@@ -98,7 +98,7 @@ const HeroSection = () => {
 
       {/* Sticky WhatsApp Button */}
       <a
-        href="https://wa.me/+9203119019327"
+        href="https://wa.me/+233240301874"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-4 right-2 sm:bottom-6 sm:right-6 bg-green-500 p-3 sm:p-4 rounded-full shadow-lg hover:bg-green-600 transition duration-300 z-50"

@@ -11,18 +11,20 @@ const Footer = () => {
         {/* Left Section - Logo & Contact */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
           <img src={logo}alt="Skydale Logo" className="h-16" />
-          <p className="text-xl font-semibold tracking-wide mt-2">LIVE ON CLOUD 9</p>
+          {/* <p className="text-xl font-semibold tracking-wide mt-2">LIVE ON CLOUD 9</p> */}
 
           <div className="mt-4 text-sm">
-            <p className="text-xl"><strong>CALL :</strong> +92 3119019327</p>
+            <p className="text-xl"><strong>CALL :</strong> +233240301874 <br /> +27734484461</p>
+            <p className="text-xl"><strong>TELEFA :</strong> +233302245348ery tr</p>
+            <p className="text-xl"><strong>WATHAPP :</strong>+233240301874 </p>
             <p className="text-xl"><strong>EMAIL :</strong> <a href="mailto:theurbanoasis@gmail.com" className="underline">theurbanoasis@gmail.com</a></p>
         
             <p className="mt-2 text-xl"><strong>ADDRESS :</strong></p>
-            <p className="text-lg">Opposite of City Centre Mall</p>
-            <p className="text-lg">On Asian Highway</p>
-            <p className="text-lg">I14/3 Islamabad</p>
+            <p className="text-lg">Plot No.146 c, Street Sechni, Block 1, Parcel 146,</p>
+            <p className="text-lg">Shewn Edgeed Pink, North Airport Residential,</p>
+            <p className="text-lg">Region Greater Accra, Ghanna</p>
 
-            <a href="/privacy-policy" className="underline mt-2 inline-block text-lg">Privacy policy</a>
+            {/* <a href="/privacy-policy" className="underline mt-2 inline-block text-lg">Privacy policy</a> */}
           </div>
 
           {/* Social Media Icons */}
@@ -31,7 +33,7 @@ const Footer = () => {
               <FaFacebookF size={29} className="hover:text-gray-500 transition duration-300" />
             </a>
 
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.youtube.com/embed/dwtyeZi1328" target="_blank" rel="noopener noreferrer">
               <FaYoutube size={29} className="hover:text-gray-500 transition duration-300" />
             </a>
           </div>
