@@ -16,7 +16,7 @@ const Footer = () => {
           <div className="mt-4 text-sm">
             <p className="text-xl"><strong>CALL :</strong> +233240301874 <br /> +27734484461</p>
             <p className="text-xl"><strong>TELEFA :</strong> +233302245348ery tr</p>
-            <p className="text-xl"><strong>WATHAPP :</strong>+233240301874 </p>
+            <p className="text-xl"><strong>WhatsApp :</strong>+233240301874 </p>
             <p className="text-xl"><strong>EMAIL :</strong> <a href="mailto:theurbanoasis@gmail.com" className="underline">theurbanoasis@gmail.com</a></p>
         
             <p className="mt-2 text-xl"><strong>ADDRESS :</strong></p>

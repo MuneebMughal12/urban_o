@@ -121,7 +121,7 @@ const TowerSection = () => {
 
           {/* WhatsApp Button */}
           <button
-            onClick={() => window.open("https://wa.me/+9203119019327", "_blank")}
+            onClick={() => window.open("https://wa.me/+233240301874", "_blank")}
             className="mt-6 w-48 h-12 flex justify-center items-center bg-[#142B2B] hover:bg-[#FF4040] text-white font-bold uppercase tracking-wider transition-all duration-300"
           >
             WhatsApp us
